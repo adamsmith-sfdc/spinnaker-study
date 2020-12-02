@@ -3,14 +3,14 @@ kind: Ingress
 metadata:
     annotations:
         nginx.ingress.kubernetes.io/rewrite-target: /$2
-    name: adamsmith-solo-ingress
+    name: adam-solo-ingress
     namespace: microservices
 spec:
     rules:
         -   host: stage.tiered-planet.net
             http:
                 paths:
-                    -   path: /adamsmith-solo(/|$)(.*)
+                    -   path: /adam-solo(/|$)(.*)
                         backend:
-                            serviceName: adamsmith-solo-microservice-service
+                            serviceName: adam-solo-microservice-service
                             servicePort: 30201
